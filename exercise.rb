@@ -9,3 +9,12 @@ venues = [
 { address: "10 Spruce Avenue Ouest", city: "Montreal", wheelchair_accessible: false, capacity: 525 }
 
 ]
+
+venues1 = []
+venues.each do |fits_150|
+  if fits_150[:city] == "Toronto" && fits_150[:wheelchair_accessible] == true && fits_150[:capacity] >= 150
+    venues1 << fits_150
+  end
+end
+
+p venues1
